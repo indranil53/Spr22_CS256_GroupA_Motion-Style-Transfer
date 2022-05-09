@@ -99,7 +99,7 @@ https://pytorch.org/vision/0.8/_modules/torchvision/models/resnet.html
 
 if __name__ == '__main__':
     # Parameters taken from generator full, hopenet implementation
-    hopenet = Hopenet(models.resnet.Bottleneck, [3, 4, 6, 3], 66, quant=True)
+    hopenet = Hopenet(models.quantization.resnet.Bottleneck, [3, 4, 6, 3], 66, quant=True)
 
 
     # Load config for parameters for dataset loader
