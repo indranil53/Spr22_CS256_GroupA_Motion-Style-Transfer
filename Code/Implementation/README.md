@@ -2,7 +2,7 @@
 ### To run this locally you need a CUDA-enabled (NVIDIA) video card. Otherwise it will fallback to the central processor and run very slowly.
 ****
 Live Feed Driving | Compressed Model Output :  
-
+![show](https://github.com/indranil53/Spr22_CS256_GroupA_Motion-Style-Transfer/blob/main/Results/result4-live_feed_with_random_sourceimage.gif)
 
 ****
 1. Run `run_windows.bat`. If execution was successful, two windows "cam" and "" will appear. Leave these windows open for the next steps. <!--If there are multiple cameras (including virtual ones) in the system, you may need to select the correct one. Open `scripts/settings_windows.bat` and edit `CAMID` variable. `CAMID` is an index number of camera like 0, 1, 2, ...-->
