@@ -36,6 +36,7 @@ The folder structure for the submission is -
 3. Diagrams - This folder includes all the architecture and implementation diagrams.
 4. Basics - This folder contains the code written to understand the basics of neural style transfer and DCGAN. 
 5. Code - All the folders, files and data for implementation of this project is uploaded in this folder.  
+6. Results - This folder includes all the videos and images generated post code execution.
 
 This repository is the Group A submission for the final project of the course CS256: Topics in Artificial Intelligence, at San Jose State University. 
 
