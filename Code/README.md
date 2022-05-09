@@ -8,4 +8,4 @@ Unofficial pytorch implementation of paper "One-Shot Free-View Neural Talking-He
 2. Implementation folder contains a wrapper used to run inference on Live-Video Feed.
 3. /Implementation/One-Shot contains the implementation of model.
 ****
-```Python 3.9.5``` and ```Pytorch 1.11.0``` are used. 
+
