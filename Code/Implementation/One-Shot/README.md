@@ -2,7 +2,7 @@
 Unofficial pytorch implementation of paper "One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing" from [zhanglonghao](https://github.com/zhanglonghao1992/One-Shot_Free-View_Neural_Talking_Head_Synthesis)
 ****
 Driving | Result:  
-
+![show](https://github.com/indranil53/Spr22_CS256_GroupA_Motion-Style-Transfer/blob/main/Results/Driving_Source_Pair.gif)
 
 ****
 Train:  
