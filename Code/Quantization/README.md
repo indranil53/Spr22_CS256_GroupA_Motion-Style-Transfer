@@ -1,6 +1,6 @@
 # Quantization 
 
-To run the hopenet quantization, the py file must be at the root of the implementation code. The script can then be ran thru the command line: 
+To run the hopenet quantization, the py file must be at the root of the OneShot implementation. The script can then be ran thru the command line: 
 
 
 ```
