@@ -5,7 +5,9 @@
 ## Summary
 The ever increasing number of multimedia applications requires in-depth research in the field of  Image Generation, Domain Adaptation and Style Transfer. Users' reliance on video conferencing applications because of the latest remote working model has given rise to new opportunities to be innovative in these fields. The progress that has been made so far using the state of the art algorithms has been immense as compared to the classical image processing approaches. We have implemented and adapted a neural network model to synthesize a talking head upon receiving a stream of input frames based on the solution proposed in [2]. The proposed model works efficiently on the live stream thus enabling its applications in video conferencing. The proposed solution takes in a source image as an input followed by a live stream of frames to drive the motion and provides us with the desired output. The trained model was optimized using static quantization to make it 1.5 times faster than before.
 
-## Installation 
+## Instructions
+1.If you want to run for live stream go to /Code/Implementation and follow the instructions there.
+2.For training and demo go to /Code/Implementation/One-Shot and follow the instructions there.
 
 ## References
 
