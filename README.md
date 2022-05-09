@@ -1,14 +1,15 @@
 # Spr22_CS256_GroupA_Motion-Style-Transfer
 
 ## Group A
-
+****
 ## Summary
 The ever increasing number of multimedia applications requires in-depth research in the field of  Image Generation, Domain Adaptation and Style Transfer. Users' reliance on video conferencing applications because of the latest remote working model has given rise to new opportunities to be innovative in these fields. The progress that has been made so far using the state of the art algorithms has been immense as compared to the classical image processing approaches. We have implemented and adapted a neural network model to synthesize a talking head upon receiving a stream of input frames based on the solution proposed in [2]. The proposed model works efficiently on the live stream thus enabling its applications in video conferencing. The proposed solution takes in a source image as an input followed by a live stream of frames to drive the motion and provides us with the desired output. The trained model was optimized using static quantization to make it 1.5 times faster than before.
-
+****
 ## Instructions
-1.If you want to run for live stream go to /Code/Implementation and follow the instructions there.
-2.For training and demo go to /Code/Implementation/One-Shot and follow the instructions there.
+1. If you want to run for live stream go to /Code/Implementation and follow the instructions there.
+2. For training and demo go to /Code/Implementation/One-Shot and follow the instructions there.
 
+****
 ## References
 
 1. Joon Son Chung, Arsha Nagrani, and Andrew Zisserman. “VoxCeleb2: deep speaker recognition”. In INTERSPEECH, 2018.
@@ -28,7 +29,7 @@ The ever increasing number of multimedia applications requires in-depth research
 15. Pinkney, J.N., Adler, D.: “Resolution dependent gan interpolation for controllable image synthesis between domains”. arXiv preprint arXiv:2010.05334 (2020) 
 16. Siarohin, Aliaksandr, et al. "First order motion model for image animation." Advances in Neural Information Processing Systems 32, 2019
 17. T.-C. Wang, A. Mallya, and M.-Y. Liu, “One-Shot Free-View neural talking-head synthesis for video conferencing,” presented at the - 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021, pp. 10034–10044, doi: 10.1109/CVPR46437.2021.00991.
-
+****
 
 ## About
 
