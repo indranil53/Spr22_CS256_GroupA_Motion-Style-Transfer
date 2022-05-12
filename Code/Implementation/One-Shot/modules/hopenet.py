@@ -4,10 +4,24 @@ from torch.autograd import Variable
 import math
 import torch.nn.functional as F
 
+'''
+Hopenet is called by the generator full function. In this function we look at config['train_params'] which we name 
+train_params. train_params is another dict, we look for train_params['loss_weights']. 
+if loss_weights['headpose'] is not 0, we load hopenet.
+
+Later in the forward loop we feed hopenet the driving video, x['driving'].
+This is then used to guage the degree (angle) change in the face 
+
+Block appears to be models.resnet.Bottleneck Thus adding the entire model in sequences 
+
+block.expansion is a hyper parameter to define the bottleneck structures in resnet. In the original code expansion is 
+set to 4. It parameterizes the depth of the convolutions 
+'''
+
 class Hopenet(nn.Module):
     # Hopenet with 3 output layers for yaw, pitch and roll
     # Predicts Euler angles by binning and regression with the expected value
-    def __init__(self, block, layers, num_bins):
+    def __init__(self, block, layers, num_bins, quant = False):
         self.inplanes = 64
         super(Hopenet, self).__init__()
         self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3,
@@ -15,6 +29,7 @@ class Hopenet(nn.Module):
         self.bn1 = nn.BatchNorm2d(64)
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
+        # These layers use bottlenecking to increase the depth while saving on computations.
         self.layer1 = self._make_layer(block, 64, layers[0])
         self.layer2 = self._make_layer(block, 128, layers[1], stride=2)
         self.layer3 = self._make_layer(block, 256, layers[2], stride=2)
@@ -26,6 +41,10 @@ class Hopenet(nn.Module):
 
         # Vestigial layer from previous experiments
         self.fc_finetune = nn.Linear(512 * block.expansion + 3, 3)
+
+        # If Quant
+        self.quant = torch.quantization.QuantStub()
+        self.dequant = torch.quantization.DeQuantStub()
 
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
@@ -42,6 +61,7 @@ class Hopenet(nn.Module):
                 nn.Conv2d(self.inplanes, planes * block.expansion,
                           kernel_size=1, stride=stride, bias=False),
                 nn.BatchNorm2d(planes * block.expansion),
+                # nn.BatchNorm2d(num_features)
             )
 
         layers = []
@@ -53,6 +73,9 @@ class Hopenet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
+        if self.quant:
+            x = self.quant(x)
+
         x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu(x)
@@ -65,11 +88,19 @@ class Hopenet(nn.Module):
 
         x = self.avgpool(x)
         x = x.view(x.size(0), -1)
+
+
+
         pre_yaw = self.fc_yaw(x)
         pre_pitch = self.fc_pitch(x)
         pre_roll = self.fc_roll(x)
 
+        if self.quant:
+            x = self.dequant(x)
+
         return pre_yaw, pre_pitch, pre_roll
+
+
 
 class ResNet(nn.Module):
     # ResNet for regression of 3 Euler angles.
