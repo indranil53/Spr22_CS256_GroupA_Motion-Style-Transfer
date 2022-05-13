@@ -8,7 +8,11 @@ The ever increasing number of multimedia applications requires in-depth research
 ## Instructions
 1. If you want to run for live stream go to /Code/Implementation and follow the instructions there.
 2. For training and demo go to /Code/Implementation/One-Shot and follow the instructions there.
-
+****
+## Results, Reports, Presentation
+1. All milestone reports are present in [Reports](https://github.com/indranil53/Spr22_CS256_GroupA_Motion-Style-Transfer/tree/main/Reports) folder
+2. All milestone presentations are present in [Presentation Slides](https://github.com/indranil53/Spr22_CS256_GroupA_Motion-Style-Transfer/tree/main/Presentation%20Slides) folder
+3. Final Presentation can be viewed here. [Video](https://drive.google.com/file/d/1egaAjSXrzo9tHfQESq92opzGhp2NpG-y/view?usp=sharing)
 ****
 ## References
 
