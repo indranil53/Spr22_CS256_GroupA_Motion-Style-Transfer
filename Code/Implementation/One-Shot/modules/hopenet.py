@@ -89,14 +89,14 @@ class Hopenet(nn.Module):
         x = self.avgpool(x)
         x = x.view(x.size(0), -1)
 
-
+        
+        if self.quant:
+            x = self.dequant(x)
 
         pre_yaw = self.fc_yaw(x)
         pre_pitch = self.fc_pitch(x)
         pre_roll = self.fc_roll(x)
 
-        if self.quant:
-            x = self.dequant(x)
 
         return pre_yaw, pre_pitch, pre_roll
 
