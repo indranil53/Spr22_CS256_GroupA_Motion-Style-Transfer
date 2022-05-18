@@ -14,6 +14,25 @@ The ever increasing number of multimedia applications requires in-depth research
 2. All milestone presentations are present in [Presentation Slides](https://github.com/indranil53/Spr22_CS256_GroupA_Motion-Style-Transfer/tree/main/Presentation%20Slides) folder
 3. Final Presentation can be viewed here. [Video](https://drive.google.com/file/d/1egaAjSXrzo9tHfQESq92opzGhp2NpG-y/view?usp=sharing)
 ****
+
+## About
+
+The folder structure for the submission is - 
+
+1. Reports - Project report for milestone 1 and the final report is uploaded here.
+2. Presentation Slides - The slides created for all three milestone are uploaded in this folder. 
+3. Diagrams - This folder includes all the architecture and implementation diagrams.
+4. Basics - This folder contains the code written to understand the basics of neural style transfer and DCGAN. 
+5. Code - All the folders, files and data for implementation of this project is uploaded in this folder.  
+6. Results - This folder includes all the videos and images generated post code execution.
+
+This repository is the Group A submission for the final project of the course CS256: Topics in Artificial Intelligence, at San Jose State University. 
+
+The course is led by - Professor Mashhour Solh.
+
+The group members are: Ajinkya Rajguru, Branden Lopez, Indranil Patil, Rushikesh Padia, Warada Kulkarni
+
+*****
 ## References
 
 1. Joon Son Chung, Arsha Nagrani, and Andrew Zisserman. “VoxCeleb2: deep speaker recognition”. In INTERSPEECH, 2018.
@@ -34,20 +53,3 @@ The ever increasing number of multimedia applications requires in-depth research
 16. Siarohin, Aliaksandr, et al. "First order motion model for image animation." Advances in Neural Information Processing Systems 32, 2019
 17. T.-C. Wang, A. Mallya, and M.-Y. Liu, “One-Shot Free-View neural talking-head synthesis for video conferencing,” presented at the - 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021, pp. 10034–10044, doi: 10.1109/CVPR46437.2021.00991.
 ****
-
-## About
-
-The folder structure for the submission is - 
-
-1. Reports - Project report for milestone 1 and the final report is uploaded here.
-2. Presentation Slides - The slides created for all three milestone are uploaded in this folder. 
-3. Diagrams - This folder includes all the architecture and implementation diagrams.
-4. Basics - This folder contains the code written to understand the basics of neural style transfer and DCGAN. 
-5. Code - All the folders, files and data for implementation of this project is uploaded in this folder.  
-6. Results - This folder includes all the videos and images generated post code execution.
-
-This repository is the Group A submission for the final project of the course CS256: Topics in Artificial Intelligence, at San Jose State University. 
-
-The course is led by - Professor Mashhour Solh.
-
-The group members are: Ajinkya Rajguru, Branden Lopez, Indranil Patil, Rushikesh Padia, Warada Kulkarni
